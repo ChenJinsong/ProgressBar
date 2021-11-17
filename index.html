@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jquery可控制调节进度条代码 - 站长素材</title>
+<link rel="stylesheet" href="css/all.css" />
+<script src="js/jquery-1.2.4.js"></script>
+<script>
+<!--tabjs begin-->
+ $(function(){
+	 $(".miaoshu div").css("display","none");
+	 $(".c1").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu1").toggle(500).siblings().fadeOut();
+		 })
+	  $(".c2").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu2").toggle(500).siblings().fadeOut();
+		 })
+	 $(".c3").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu3").toggle(500).siblings().fadeOut();
+		 })
+	 $(".c4").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu4").toggle(500).siblings().fadeOut();
+		 })
+	 $(".c5").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu5").toggle(500).siblings().fadeOut();
+		 })
+		 
+		 $(".c6").click(function(){
+		 $(this).parent().parent().find(".miaoshu .miaoshu6").toggle(500).siblings().fadeOut();
+		 }) 
+	 <!--tabjs over-->
+	 
+	 <!--初始化根据数字显示进度begin-->
+	 var bfb = $(".miaoshu1 .span1").text();
+	 bfb =bfb*140/100;
+	$(".bfb1 img").animate({width:bfb+"px"})
+	
+ var bfb = $(".miaoshu2 .span2").text();
+	 bfb =bfb*140/100;
+	$(".bfb2 img").animate({width:bfb+"px"})
+	
+	var bfb = $(".miaoshu3 .span3").text();
+	 bfb =bfb*140/100;
+	$(".bfb3 img").animate({width:bfb+"px"})
+	
+	var bfb = $(".miaoshu4 .span4").text();
+	 bfb =bfb*140/100;
+	$(".bfb4 img").animate({width:bfb+"px"})
+	
+	var bfb = $(".miaoshu5 .span5").text();
+	 bfb =bfb*140/100;
+	$(".bfb5 img").animate({width:bfb+"px"})
+	
+	var bfb = $(".miaoshu6 .span6").text();
+	 bfb =bfb*140/100;
+	$(".bfb6 img").animate({width:bfb+"px"})
+	
+	<!--初始化根据数字显示进度over-->
+ 
+	
+    <!--点击进度条调整进度_调整数字改变进度 begin-->
+	 $(".bfb1").click(function(e){
+		 $(this).parent().parent().find(".miaoshu .miaoshu1").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb1 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu1 .span1").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu1 .span1").text(parseInt(bfb));
+			 })
+     $(".miaoshu1 .span1").blur(function(){
+	 var bfb = $(".miaoshu1 .span1").text();	 bfb =bfb*140/100;	$(".bfb1 img").animate({width:bfb+"px"});
+		 })
+		 
+     $(".bfb2").click(function(e){
+		 $(this).parent().parent().find(".miaoshu .miaoshu2").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb2 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu2 .span2").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu2 .span2").text(parseInt(bfb));
+			 })
+     $(".miaoshu2 .span2").blur(function(){
+	 var bfb = $(".miaoshu2 .span2").text();	 bfb =bfb*140/100;	$(".bfb2 img").animate({width:bfb+"px"});
+		 })
+		 
+	$(".bfb3").click(function(e){
+		$(this).parent().parent().find(".miaoshu .miaoshu3").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb3 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu3 .span3").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu3 .span3").text(parseInt(bfb));
+			 })
+     $(".miaoshu3 .span3").blur(function(){
+	 var bfb = $(".miaoshu3 .span3").text();	 bfb =bfb*140/100;	$(".bfb3 img").animate({width:bfb+"px"});
+		 })
+		 
+	 $(".bfb4").click(function(e){
+		 $(this).parent().parent().find(".miaoshu .miaoshu4").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb4 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu4 .span4").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu4 .span4").text(parseInt(bfb));
+			 })
+     $(".miaoshu4 .span4").blur(function(){
+	 var bfb = $(".miaoshu4 .span4").text();	 bfb =bfb*140/100;	$(".bfb4 img").animate({width:bfb+"px"});
+		 })
+		 
+		 
+	 $(".bfb5").click(function(e){
+		 $(this).parent().parent().find(".miaoshu .miaoshu5").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb5 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu5 .span5").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu5 .span5").text(parseInt(bfb));
+			 })
+     $(".miaoshu5 .span5").blur(function(){
+	 var bfb = $(".miaoshu5 .span5").text();	 bfb =bfb*140/100;	$(".bfb5 img").animate({width:bfb+"px"});
+		 })
+		 
+	$(".bfb6").click(function(e){
+		$(this).parent().parent().find(".miaoshu .miaoshu6").fadeIn().siblings().fadeOut();
+			  x=$(this).offset();
+     var ep =   e.pageX - x.left;
+     $(".bfb6 img").animate({width:ep+"px"});
+	 var bfb = $(".miaoshu6 .span6").text();
+	 bfb = ep*100/140;
+	 $(".miaoshu6 .span6").text(parseInt(bfb));
+			 })
+     $(".miaoshu6 .span6").blur(function(){
+	 var bfb = $(".miaoshu6 span6").text();	 bfb =bfb*140/100;	$(".bfb6 img").animate({width:bfb+"px"});
+		 })
+		 
+ 
+    <!--点击进度条调整进度_调整数字改变进度 度over-->
+		 
+	 
+		  })
+</script>
+</head>
+<body style=" background:url(images/index_011.png) repeat;">
+<div style="width:1024px; margin:0 auto;">
+  <div class="tt"     style=" color:#d7d7d7; font-size:26px; padding:20px;  ">进度系统</div>
+  <div class="xiangmu" style="-moz-border-radius: 6px;-khtml-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;   background:url(images/bgt.png) repeat ; padding:5px; margin-bottom:10px;
+">
+    
+    <div style=" text-align:center;  color:#d7d7d7;">
+      <div style="float:left; width:113px;">页面设计</div>
+      <div style="float:left; width:180px; margin-left:34px;">WEB前端</div>
+      <div style="float:left; width:180px;">程序开发</div>
+      <div style="float:left; width:180px;">网站实施</div>
+      <div style="float:left; width:180px;">内容填充</div>
+      <div style="float:left; width:130px; text-align:left; text-indent:60px;">项目完结</div>
+      <div style=" clear:both;"></div>
+    </div>
+    <div style=" clear:both;"></div>
+  </div>
+  <div class="xiangmu" style="-moz-border-radius: 6px;-khtml-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;   background:url(images/bgt.png) repeat ; padding:5px; margin-bottom:10px;
+">
+    <div  contenteditable="true" style="-moz-border-radius: 4px;-khtml-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px; color:#d7d7d7; font-size:16px; text-align:center; background:url(images/bgt.png) repeat ; padding:5px 0px; "><div style="float:left; padding-left:10px;">中国经济改革与发展研究院</div><div style="float:right; padding-right:10px;">  13-06-23</div><div style=" clear:both;"></div></div>
+    <div style=" background:url(images/index_05.png) no-repeat; width:945px; height:37px; padding:14px 11px; margin:0px auto 0 auto;">
+      <div class="c1" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div class="bfb1" style=" width:140px; height:27px; float:left; padding-top:13px;  "><img style=" height:13px; display:block;" src="images/1.png"></div>
+      <div class="c2" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div class="bfb2" style=" width:140px; height:40px; float:left;  padding-top:13px;  "><img style=" height:13px; display:block;" src="images/2.png"></div>
+      <div class="c3" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div  class="bfb3" style=" width:140px; height:40px; float:left;   padding-top:13px;  "><img style=" height:13px; display:block;" src="images/3.png"></div>
+      <div class="c4" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div  class="bfb4" style=" width:140px; height:40px; float:left;   padding-top:13px;  "><img style=" height:13px; display:block;" src="images/4.png"></div>
+      <div class="c5" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div  class="bfb5" style=" width:140px; height:40px; float:left;  padding-top:13px;  "><img style=" height:13px; display:block;" src="images/5.png"></div>
+      <div class="c6" style=" width:40px; height:40px; float:left; cursor:pointer;"></div>
+      <div style=" clear:both;"></div>
+    </div>
+    <div class="miaoshu" style=" position:relative; ">
+     <div class="miaoshu1"  style="  margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute; top:10px; left:-18px;" > 进度： <span  class="span1" contenteditable="true" style="">10</span>%<br>
+     <span contenteditable="true" >已完成：</span><br>
+      <span contenteditable="true" >未完成： </span></div>
+    <div class="miaoshu2"   style="  margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute; top:10px; left:105px;" > 进度： <span  class="span2" contenteditable="true" style="">10</span>%<br>
+      <span contenteditable="true" >已完成：</span><br>
+      <span contenteditable="true" >未完成： </span></div>
+    <div class="miaoshu3"   style="  margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute; top:10px; left:290px;" > 进度： <span contenteditable="true" style="" class="span3">50</span>%<br>
+      <span contenteditable="true" >已完成：</span><br>
+      <span contenteditable="true" >未完成： </span></div>
+      
+     <div class="miaoshu4"  style="  margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute;  top:10px; left:470px;" > 进度： <span contenteditable="true" style="" class="span4">20</span>%<br>
+    <span contenteditable="true" >已完成：</span><br>
+      <span contenteditable="true" >未完成： </span></div>
+     <div class="miaoshu5"  style="   margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute; top:10px; left:650px;" > 进度： <span contenteditable="true" style="" class="span5">10</span>%<br>
+      <span contenteditable="true" >已完成：</span><br>
+      <span contenteditable="true" >未完成： </span> </div>
+      <div class="miaoshu6"   style="   margin-left:13px;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;  background:url(images/bgt.png) repeat ; padding:10px; display:inline-block;width:225px; height:auto;  position:absolute; top:10px; left:762px;" > 项目总结： </div>
+      <div style=" clear:both;"></div>
+  </div>
+  <div style=" clear:both;"></div>
+  </div>
+  
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
